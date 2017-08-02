@@ -1,0 +1,145 @@
+<!-- views/index.ejs -->
+<style>
+    .wikitable {font-size: 15px;}
+    .IPA {margin-right: 10px; font-size:20px;}
+    .input { text-align: left;}
+</style>
+<table style="background:none;">
+    <tbody><tr>
+        <td style="vertical-align: top;">
+            <table class="wikitable" style="margin: 2em; text-align: center;">
+                <tr>
+                    <th colspan="3"><a href="http://en.wikipedia.org/wiki/Consonant" title="Consonant">Consonants</a></caption></th>
+                </tr>
+                <tbody><tr>
+                    <th class="input">Input as</th>
+                    <th><a href="http://en.wikipedia.org/wiki/Help:IPA" title="Help:IPA">IPA</a></th>
+                    <th>Examples</th>
+                    <th>English approximation</th>
+                </tr>
+                <tr>
+                    <td class="input">N</td>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Palatal_nasal#Palatal_or_alveolo-palatal" title="Palatal nasal">ɲ</a></span></big></td>
+                    <td style="text-align: left;">ga<b>gn</b>er, champa<b>gn</b>e</td>
+                    <td style="text-align: left;"><i>roughly like</i> ca<b>ny</b>on</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Voiced_uvular_fricative" title="Voiced uvular fricative">ʁ</a></span></big></td>
+                    <td style="text-align: left;"><b>r</b>ega<b>r</b>der, nôt<b>r</b>e<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td>
+                    <td style="text-align: left;">no English equivalent</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Voiceless_palato-alveolar_sibilant" title="Voiceless palato-alveolar sibilant">ʃ</a></span></big></td>
+                    <td style="text-align: left;"><b>ch</b>ance</td>
+                    <td style="text-align: left;"><b>sh</b>oe</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Voiced_palato-alveolar_sibilant" title="Voiced palato-alveolar sibilant">ʒ</a></span></big></td>
+                    <td style="text-align: left;"><b>j</b>amais, visa<b>g</b>e</td>
+                    <td style="text-align: left;">mea<b>s</b>ure</td>
+                </tr>
+                <tr>
+                    <th colspan="3"><a href="http://en.wikipedia.org/wiki/Semivowel" title="Semivowel">Semivowels</a></th>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Palatal_approximant#Palatal" title="Palatal approximant">j</a></span></big></td>
+                    <td style="text-align: left;">f<b>i</b>ef, pa<b>y</b>er, fi<b>ll</b>e, trava<b>il</b></td>
+                    <td style="text-align: left;"><b>y</b>et</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Voiced_labio-velar_approximant" title="Voiced labio-velar approximant">w</a></span></big></td>
+                    <td style="text-align: left;"><b>ou</b>i, l<b>o</b>i, m<b>o</b>yen, <b>w</b>eb, <b>w</b>hisky</td>
+                    <td style="text-align: left;"><b>w</b>et</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Labialized_palatal_approximant" title="Labialized palatal approximant">ɥ</a></span></big></td>
+                    <td style="text-align: left;">h<b>u</b>it, P<b>u</b>y</td>
+                    <td style="text-align: left;"><i>like a simultaneous</i> <b>w</b>et <i>and</i> <b>y</b>et</td>
+                </tr>
+                </tbody></table>
+        </td>
+        <td style="vertical-align: top;">
+            <table class="wikitable" style="margin: 1em 2em; text-align: center;">
+                <tr>
+                    <th colspan="3"><a href="http://en.wikipedia.org/wiki/Vowel" title="Vowel">Oral Vowels</a></th>
+                </tr>
+                <tbody>
+                <tr>
+                    <th><a href="http://en.wikipedia.org/wiki/Help:IPA" title="Help:IPA">IPA</a></th>
+                    <th>Examples</th>
+                    <th>English approximation</th>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">e</a></span></big></td>
+                    <td style="text-align: left;">cl<b>é</b>, l<b>e</b>s, ch<b>e</b>z, all<b>e</b>r, pi<b>e</b>d, journ<b>ée</b></td>
+                    <td style="text-align: left;">h<b>e</b>y</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel" title="Open-mid front unrounded vowel">ɛ</a></span></big></td>
+                    <td style="text-align: left;">b<b>aie</b>, f<b>ai</b>te, m<b>e</b>ttre, r<b>e</b>nne, cr<b>è</b>me, p<b>ei</b>ne</td>
+                    <td style="text-align: left;">b<b>e</b>st</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel" title="Open-mid front unrounded vowel">ɛː</a></span></big></td>
+                    <td style="text-align: left;">f<b>ê</b>te, m<b>aî</b>tre, m<b>è</b>tre, r<b>ei</b>ne, r<b>eî</b>tre, c<b>ai</b>sse, pr<b>e</b>sse, Lem<b>ais</b>tre, Lév<b>es</b>que<sup id="cite_ref-merger_5-1" class="reference"><a href="#cite_note-merger-5">[5]</a></sup></td>
+                    <td style="text-align: left;">r<b>e</b>d</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Mid_central_vowel#Mid_central_rounded_vowel" title="Mid central vowel">ə</a></span></big></td>
+                    <td style="text-align: left;">l<b>e</b>, r<b>e</b>poser, m<b>on</b>sieur, f<b>ai</b>sons</td>
+                    <td style="text-align: left;"><b>a</b>gain <i>(often <a href="http://en.wikipedia.org/wiki/Elision" title="Elision">elided</a>, see <a href="http://en.wikipedia.org/wiki/E_muet" class="mw-redirect" title="E muet">e muet</a>)</i></td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Open-mid_front_rounded_vowel" title="Open-mid front rounded vowel">œ</a></span></big></td>
+                    <td style="text-align: left;">s<b>œu</b>r, j<b>eu</b>ne</td>
+                    <td style="text-align: left;"><i>roughly like</i> b<b>ir</b>d <i>(RP)</i></td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Close-mid_front_rounded_vowel" title="Close-mid front rounded vowel">ø</a></span></big></td>
+                    <td style="text-align: left;">c<b>eu</b>x, j<b>eû</b>ner, qu<b>eue</b></td>
+                    <td style="text-align: left;"><i>roughly like</i> b<b>ir</b>d</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">o</a></span></big></td>
+                    <td style="text-align: left;">s<b>o</b>t, h<b>au</b>t, bur<b>eau</b></td>
+                    <td style="text-align: left;">g<b>o</b> <i>(<a href="http://en.wikipedia.org/wiki/Scottish_English" title="Scottish English">Scottish English</a>)</i></td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel" title="Open-mid back rounded vowel">ɔ</a></span></big></td>
+                    <td style="text-align: left;">s<b>o</b>rt, minim<b>u</b>m</td>
+                    <td style="text-align: left;">l<b>o</b>t (RP/Australian)</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Close_front_rounded_vowel" title="Close front rounded vowel">y</a></span></big></td>
+                    <td style="text-align: left;">t<b>u</b>, s<b>û</b>r, r<b>ue</b></td>
+                    <td style="text-align: left;">no English equivalent</td>
+                </tr>
+                <tr>
+                    <th colspan="3"><a href="http://en.wikipedia.org/wiki/Nasal_vowel" title="Nasal vowel">Nasal vowels</a></th>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Nasal_vowel" title="Nasal vowel">ɑ̃</a></span></big></td>
+                    <td style="text-align: left;">s<b>an</b>s, ch<b>am</b>p, v<b>en</b>t, t<b>em</b>ps, J<b>ean</b>, t<b>aon</b></td>
+                    <td style="text-align: left;">no English equivalent</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Nasal_vowel" title="Nasal vowel">ɛ̃</a></span></big></td>
+                    <td style="text-align: left;">v<b>in</b>, <b>im</b>pair, p<b>ain</b>, d<b>aim</b>, pl<b>ein</b>, R<b>eim</b>s, s<b>yn</b>thèse, s<b>ym</b>pa, bi<b>en</b></td>
+                    <td style="text-align: left;">no English equivalent/td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Nasal_vowel" title="Nasal vowel">œ̃</a></span></big></td>
+                    <td style="text-align: left;"><b>un</b>, parf<b>um</b><sup id="cite_ref-merger_5-2" class="reference"><a href="#cite_note-merger-5">[5]</a></sup></td>
+                    <td style="text-align: left;">no English equivalent</td>
+                </tr>
+                <tr>
+                    <td><big><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Nasal_vowel" title="Nasal vowel">ɔ̃</a></span></big></td>
+                    <td style="text-align: left;">s<b>on</b>, n<b>om</b></td>
+                    <td style="text-align: left;">no English equivalent</td>
+                </tr>
+                </tbody></table>
+
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,63 @@
+Index: views/partials/template/header.ejs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- views/partials/template/header.ejs	(date 1482043562000)
++++ views/partials/template/header.ejs	(revision )
+@@ -34,7 +34,7 @@
+                   <li role="presentation"><a href="/home">Home</a></li>
+                   <li role="presentation"><a href="/requestHelp">Ask for Help</a></li>
+                   <li role="presentation"><a href="#">My Posts</a></li>
+-                  <li class="navbar-right active" role="presentation"><a href="/profile">My Profile</a></li>
++                  <li class="navbar-right active"><a href="/profile">My Profile</a></li>
+                 </ul>
+             </div>
+         </div><!-- layout -->
+Index: views/profile.ejs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- views/profile.ejs	(date 1482043562000)
++++ views/profile.ejs	(revision )
+@@ -31,7 +31,7 @@
+                             <% for(i=0;i<4;i++) {%>
+                             <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                             <% }%><br>
+-                            <img src='<%= user.picture.data %>'>
++                            <img src=<%= user.picture.data %> >
+                             <strong>email</strong>: <%= user.email %><br>
+                             <strong>native language</strong>: <%= user.nativeLanguage %><br>
+                             <strong>other language</strong>: <%= user.otherLanguage %><br>
+@@ -58,7 +58,7 @@
+                             <button type="submit" class="btn btn-default btn-sm pull-right">Erase</button>
+                         </form>
+                     </div>
+-                    <div id="edit" style="visibility:hidden">
++                    <div id="edit" style="visibility:hidden">y
+                         <form action="/modifyIntroduce" method="post">
+                             <textarea class="form-control" id="introduce" name="introduce" rows="5" placeholder="Write something about yourself..."></textarea><br>
+                             <a onclick="dispInit()" class="btn btn-default btn-sm pull-right">Cancel</a>
+Index: app.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app.js	(date 1482043562000)
++++ app.js	(revision )
+@@ -37,10 +37,14 @@
+ app.use(passport.session({cookie: { expires : new Date(Date.now() + 3600000) } })); // persistent login sessions
+ app.use(flash()); // use connect-flash for flash messages stored in session
+ 
++var multer = require('multer');
++var upload = multer({ dest: './uploads' });
++
+ // routes ======================================================================
+ require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+ 
+ 
++
+ app.use('/', hasanRoutes);
+ 
+ 

@@ -1,0 +1,88 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>PhoneticDict</title>
+    <link rel="shortcut icon" href="/images/icon.png" />
+    <% include partials/template/head.ejs %>
+  <style>
+    body 		{ padding-top:5vmin; }
+    span           {color: red;}
+    .jumbotron {background-color: #246AAD;}
+    .title      {font-family: 'Great Vibes', cursive; color: white; font-size: 14vmin;}
+    .title2      {color: red; font-size: 3vmin;}
+    .btn {font-size: 20px; margin-top: 20px; }
+    @media (min-width: 766px) {
+        .results {font-size: 17px;}
+    }
+    @media (max-width: 767px) {
+        .results {font-size: 12px;}
+    }
+
+  </style>
+</head>
+<body>
+<div class="container" >
+
+  <div class="jumbotron text-center" >
+    <a href="/">
+        <!--<img src="/images/logo.png" height="300" width="300" alt="fanyi-pack">-->
+        <span class="title">PhoneticDict</span><span class="title2">&emsp;French</span>
+    </a>
+    <form action="/search" method="get">
+    <input id=query name=q placeholder="Enter any pronunciation" class="form-control input-lg tt-input" type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;">
+    <input type="submit" style="display:none"/>
+    </form>
+      <div class="accordion" id="accord">
+      <button class="btn btn-primary" role="button" data-toggle="collapse" data-parent="#accord" data-target="#how" aria-expanded="false" aria-controls="how">
+          How to use
+      </button>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-parent="#accord" data-target="#what" aria-expanded="false" aria-controls="what">
+          What's this
+      </button>
+      </div>
+      <div class="accordion-group">
+      <div class="collapse well" id="how" style="font-size: 17px">
+          Input any french word the way you hear it, following the rules in the table bellow.<br>
+          E.g. <span>bOjur</span> => Bonjour, <span>ASAte</span> => Enchanté <br>
+          You can also use wildcard "*" for phonems you don't know.<br>
+          E.g. <span>m*rsi</span> will find the word "merci".
+          <% include how_table.ejs %>
+      </div>
+      <div class="collapse well" id="what">
+          <div class="row" style="font-size: 17px">
+              You're learning french ? Then you must know french spelling is hard and nonsensical ! <br>
+              How to search for the meaning of a word you just heard if you don't know how to spell it ?<br>
+              Easy ! Just type it the way you hear it, following the rules in "how to use" section.
+              No need to be a spelling expert to learn french :-)
+          </div>
+      </div>
+      </div>
+
+  </div>
+</div>
+<div class="container">
+    <% if(data == "no"){ %>
+        <em style="font-size: 18px;">No result...  <br>Make sure to use phonetic spelling, not regular spelling (see "How to use")</em>
+    <% } else if(data.length) { %>
+    <table class="table table-hover results">
+        <tr>
+            <th >Pron.</th>
+            <th >French</th>
+            <th>English</th>
+            <th>Definition</th>
+        </tr>
+        <% for(var i = 0;i < data.length;i++) { %>
+        <tr>
+            <td><%=data[i].phon%></td>
+            <td><%=data[i].word%></td>
+            <td><%=data[i].trans%></td>
+            <td><%=data[i].def%></td>
+        </tr>
+        <% } %>
+    </table>
+    <%  } %>
+</div>
+<% include partials/template/footer.ejs %>
+</body>
+</html>

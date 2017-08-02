@@ -1,0 +1,42 @@
+==============================INFO==========================
+- Size of DB :
+SELECT table_schema                                        "DB Name", 
+   Round(Sum(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" 
+FROM   information_schema.tables 
+GROUP  BY table_schema; 
+
+- Location DB : show variables where Variable_name ='datadir';
+
+- Disk space : df -h
+==============================DEPLOY================================
+
+- Install Mysql :
+https://www.digitalocean.com/community/tutorials/how-to-install-the-latest-mysql-on-ubuntu-16-04
+
+- Install Node :
+http://blog.teamtreehouse.com/install-node-js-npm-linux
+
+- migrate database to server :
+ * mysqldump -u root --password=167 --host=localhost -C dict | ssh tangmu@13.68.217.80 "mysql -u root --password=167 dict"
+
+migrate website directory to server (faster than scp) :
+rsync -avP PhonDictWeb root@128.199.228.150:~/
+
+- Open port 80 on Microsoft Azure server :
+https://medium.com/@adammoisa/how-to-deploy-a-meteor-app-to-an-azure-vm-with-mup-on-the-new-azure-interface-da49652a59d
+
+- Add node to sudo path
+sudo visudo
+secure_path = "PATH:/home/tangmu/.linuxbrew/bin"
+
+- create non-root sudo user :
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7
+- Login as non-root user
+sudo -u linuxbrew -i /bin/bash
+
+- Run webapp
+sudo /home/tangmu/.linuxbrew/bin/node bin/www
+OR
+sudo node bin/www &> log.txt &
+
+WEBSITE : http://phoneticdict.eastus.cloudapp.azure.com/
