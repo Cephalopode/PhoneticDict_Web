@@ -1,0 +1,25 @@
+version: "2"
+services:
+  db:
+    image: mysql:5.7
+    container_name: phonetic_db
+    restart: always
+    environment:
+      - MYSQL_DATABASE=dict
+      - MYSQL_ROOT_PASSWORD=GLAEbjpCB2EHsaGA
+    volumes:
+      - /var/lib/phonetic_dict_mysql:/var/lib/mysql
+      - ./dict.mysql:/dict.mysql
+  app:
+    image: "node"
+    container_name: phonetic_app
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "4008:3000"
+    command: "npm run start"

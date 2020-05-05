@@ -1,13 +1,13 @@
-var express = require('express');
+var express = require("express");
 
-var mysql      = require('mysql');
+var mysql = require("mysql");
 var pool = mysql.createPool({
-    connectionLimit : 100,
-    host     : 'localhost',
-    user     : 'root',
-    password : '167',
-    database : 'dict',
-    debug : false
+  connectionLimit: 100,
+  host: "db",
+  user: "root",
+  password: "GLAEbjpCB2EHsaGA",
+  database: "dict",
+  debug: false,
 });
 
 /*pool.connect(function(err) {
