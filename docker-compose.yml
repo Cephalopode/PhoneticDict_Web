@@ -15,6 +15,7 @@ services:
     container_name: phonetic_app
     user: "node"
     working_dir: /home/node/app
+    restart: always
     environment:
       - NODE_ENV=production
       - PORT=3000
